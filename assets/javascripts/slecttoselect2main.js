@@ -36,28 +36,17 @@ function replaceAllSelect2(){
 
     for (i = 0; i < elements.length; i++) {
 
-        // For not woroking 「width:resolve」
-        if(elements[i].id == 'year'
-        || elements[i].id == 'month'
-        || elements[i].id == 'columns'
-        || elements[i].id == 'settings_issuequery_query_id'
-        || elements[i].id == 'block-select'){
-
-            $("#" + elements[i].id).select2({
-                width:"175px",
-                placeholder: "",
-                allowClear: true
-            });
-        }
-        else {
+        if (elements[i].id == 'project_parent_id' 
+        || elements[i].id == 'issue_project_id') 
+        || elements[i].id == 'time_entry_project_id') {
             // For All Pages
             $("#" + elements[i].id).select2({
                 width:"resolve",
                 placeholder: "",
                 allowClear: true
-            });
+            });             
         }
-
+        
     }
 
 }
