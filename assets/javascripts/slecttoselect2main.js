@@ -37,7 +37,7 @@ function replaceAllSelect2(){
     for (i = 0; i < elements.length; i++) {
 
         if (elements[i].id == 'project_parent_id' 
-        || elements[i].id == 'issue_project_id') 
+        || elements[i].id == 'issue_project_id'
         || elements[i].id == 'time_entry_project_id') {
             // For All Pages
             $("#" + elements[i].id).select2({
